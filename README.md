@@ -6,8 +6,6 @@ Accessing the Queries: [project_sql](/project_sql/)
 # Background
 The dataset used to identify these Data Analyst roles and skills contains the tables: **job_postings_fact, company_dim, skills_job_dim and skills_dim.**
 
-Accessing the Tables: [csv_files](/csv_files/)
-
 ## Key questions that will be answered:
 **1.** What are the **top-paying** Data Analyst **jobs** in the **UK**?
 
