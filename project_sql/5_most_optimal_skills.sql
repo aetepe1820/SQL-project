@@ -1,6 +1,5 @@
 /* Q: What are the most optimal skills to learn?
 - aka. High in-demand and High-paying.
-- ...
 */
 
 WITH skills_demand AS (
@@ -16,8 +15,8 @@ WITH skills_demand AS (
         skills_dim.skill_id = skills_job_dim.skill_id
     WHERE
         job_title_short = 'Data Analyst' AND
-        salary_year_avg IS NOT NULL AND
-        job_location = 'United Kingdom'
+        salary_year_avg IS NOT NULL 
+        --AND job_location = 'United Kingdom'
     GROUP BY
         skills_dim.skill_id
 ), top_skills AS (
@@ -32,8 +31,8 @@ WITH skills_demand AS (
         skills_dim.skill_id = skills_job_dim.skill_id
     WHERE
         job_title_short = 'Data Analyst' AND
-        salary_year_avg IS NOT NULL AND
-        job_location = 'United Kingdom'
+        salary_year_avg IS NOT NULL 
+        --AND job_location = 'United Kingdom'
     GROUP BY
         skills_dim.skill_id
 )
@@ -50,4 +49,4 @@ INNER JOIN top_skills ON
 ORDER BY
     demand_count DESC,
     average_salary DESC
-LIMIT 10
+LIMIT 10;

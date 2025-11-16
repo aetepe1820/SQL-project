@@ -1,7 +1,5 @@
-/* Q: What are the skills required for top-paying Data Analyst jobs?
-- ...
-- ...
-*/
+-- Q: What are the skills required for top-paying Data Analyst jobs?
+
 
 WITH top_paying_jobs AS(
     SELECT
@@ -30,4 +28,4 @@ FROM
 INNER JOIN skills_job_dim ON
     skills_job_dim.job_id = top_paying_jobs.job_id
 INNER JOIN skills_dim ON
-    skills_dim.skill_id = skills_job_dim.skill_id
+    skills_dim.skill_id = skills_job_dim.skill_id;
